@@ -1,24 +1,84 @@
 
-import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Database, Globe, GitBranch, Github, Figma } from "lucide-react";
 
 const Skills = () => {
-  const technicalSkills = [
-    { name: "React/TypeScript", level: 95 },
-    { name: "CSS/Tailwind", level: 90 },
-    { name: "JavaScript/ES6+", level: 88 },
-    { name: "HTML5", level: 95 },
-    { name: "Node.js", level: 75 },
-    { name: "Git/GitHub", level: 85 },
+  const skillCategories = [
+    {
+      title: "Frontend Development",
+      description: "Modern web technologies and frameworks",
+      color: "text-blue-600",
+      skills: [
+        { name: "React", level: "Expert" },
+        { name: "TypeScript", level: "Advanced" },
+        { name: "JavaScript", level: "Expert" },
+        { name: "HTML5", level: "Expert" },
+        { name: "CSS3", level: "Advanced" },
+        { name: "Tailwind CSS", level: "Advanced" },
+        { name: "Next.js", level: "Intermediate" },
+        { name: "Vue.js", level: "Intermediate" },
+      ]
+    },
+    {
+      title: "Backend & Tools",
+      description: "Server technologies and development tools",
+      color: "text-green-600",
+      skills: [
+        { name: "Node.js", level: "Intermediate" },
+        { name: "Git", level: "Advanced" },
+        { name: "GitHub", level: "Advanced" },
+        { name: "REST APIs", level: "Advanced" },
+        { name: "GraphQL", level: "Intermediate" },
+        { name: "MongoDB", level: "Intermediate" },
+        { name: "PostgreSQL", level: "Intermediate" },
+        { name: "Docker", level: "Beginner" },
+      ]
+    },
+    {
+      title: "Design & UX",
+      description: "User experience and visual design",
+      color: "text-purple-600",
+      skills: [
+        { name: "UI/UX Design", level: "Advanced" },
+        { name: "Figma", level: "Advanced" },
+        { name: "Adobe XD", level: "Intermediate" },
+        { name: "Sketch", level: "Intermediate" },
+        { name: "Prototyping", level: "Advanced" },
+        { name: "Design Systems", level: "Advanced" },
+        { name: "User Research", level: "Intermediate" },
+        { name: "Accessibility", level: "Advanced" },
+      ]
+    }
   ];
 
-  const designSkills = [
-    { name: "UI/UX Design", level: 92 },
-    { name: "Figma/Sketch", level: 90 },
-    { name: "Prototyping", level: 85 },
-    { name: "Design Systems", level: 88 },
-    { name: "User Research", level: 80 },
-    { name: "Accessibility", level: 85 },
-  ];
+  const getIcon = (categoryTitle: string) => {
+    switch (categoryTitle) {
+      case "Frontend Development":
+        return <Code className="w-6 h-6" />;
+      case "Backend & Tools":
+        return <Database className="w-6 h-6" />;
+      case "Design & UX":
+        return <Figma className="w-6 h-6" />;
+      default:
+        return <Globe className="w-6 h-6" />;
+    }
+  };
+
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case "Expert":
+        return "bg-green-100 text-green-800 border-green-200";
+      case "Advanced":
+        return "bg-blue-100 text-blue-800 border-blue-200";
+      case "Intermediate":
+        return "bg-yellow-100 text-yellow-800 border-yellow-200";
+      case "Beginner":
+        return "bg-gray-100 text-gray-800 border-gray-200";
+      default:
+        return "bg-gray-100 text-gray-800 border-gray-200";
+    }
+  };
 
   return (
     <section id="skills" className="py-20 bg-accent/20">
@@ -26,47 +86,62 @@ const Skills = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">Skills & Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit spanning both technical development and creative design.
+            A comprehensive toolkit spanning modern web development, design, and user experience.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">
-              Technical Skills
-            </h3>
-            {technicalSkills.map((skill, index) => (
-              <div key={skill.name} className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground">{skill.level}%</span>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, categoryIndex) => (
+            <Card 
+              key={category.title} 
+              className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 bg-background/50 backdrop-blur-sm"
+              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+            >
+              <CardHeader className="text-center pb-4">
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent mb-4 group-hover:scale-110 transition-transform duration-200 ${category.color}`}>
+                  {getIcon(category.title)}
                 </div>
-                <Progress 
-                  value={skill.level} 
-                  className="h-3"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                />
-              </div>
-            ))}
-          </div>
+                <CardTitle className="text-xl font-bold mb-2">{category.title}</CardTitle>
+                <p className="text-sm text-muted-foreground">{category.description}</p>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div 
+                      key={skill.name}
+                      className="group/skill"
+                      style={{ animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s` }}
+                    >
+                      <Badge 
+                        variant="outline" 
+                        className={`${getLevelColor(skill.level)} hover:scale-105 transition-all duration-200 cursor-default px-3 py-1 text-xs font-medium group-hover/skill:shadow-md border`}
+                      >
+                        <span className="font-medium">{skill.name}</span>
+                        <span className="ml-1 text-xs opacity-70">({skill.level})</span>
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-center mb-8 text-purple-600">
-              Design Skills
-            </h3>
-            {designSkills.map((skill, index) => (
-              <div key={skill.name} className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground">{skill.level}%</span>
-                </div>
-                <Progress 
-                  value={skill.level} 
-                  className="h-3"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                />
-              </div>
-            ))}
+        {/* Additional Skills Summary */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center space-x-8 bg-background/50 backdrop-blur-sm rounded-full px-8 py-4 border border-border/50">
+            <div className="flex items-center space-x-2">
+              <Github className="w-5 h-5 text-muted-foreground" />
+              <span className="text-sm font-medium">Open Source Contributor</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <GitBranch className="w-5 h-5 text-muted-foreground" />
+              <span className="text-sm font-medium">Version Control Expert</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Globe className="w-5 h-5 text-muted-foreground" />
+              <span className="text-sm font-medium">Cross-Platform Development</span>
+            </div>
           </div>
         </div>
       </div>
