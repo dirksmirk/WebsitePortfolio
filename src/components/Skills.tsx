@@ -1,6 +1,4 @@
 
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Database, Globe, GitBranch, Github, Figma } from "lucide-react";
 
 const Skills = () => {
@@ -92,19 +90,19 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <Card 
+            <div 
               key={category.title} 
-              className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 bg-background/50 backdrop-blur-sm"
+              className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 bg-background/50 backdrop-blur-sm rounded-lg border border-border bg-card text-card-foreground shadow-sm"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
-              <CardHeader className="text-center pb-4">
+              <div className="flex flex-col space-y-1.5 p-6 text-center pb-4">
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent mb-4 group-hover:scale-110 transition-transform duration-200 ${category.color}`}>
                   {getIcon(category.title)}
                 </div>
-                <CardTitle className="text-xl font-bold mb-2">{category.title}</CardTitle>
+                <h3 className="text-xl font-bold mb-2 text-2xl font-semibold leading-none tracking-tight">{category.title}</h3>
                 <p className="text-sm text-muted-foreground">{category.description}</p>
-              </CardHeader>
-              <CardContent>
+              </div>
+              <div className="p-6 pt-0">
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <div 
@@ -112,18 +110,17 @@ const Skills = () => {
                       className="group/skill"
                       style={{ animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s` }}
                     >
-                      <Badge 
-                        variant="outline" 
-                        className={`${getLevelColor(skill.level)} hover:scale-105 transition-all duration-200 cursor-default px-3 py-1 text-xs font-medium group-hover/skill:shadow-md border`}
+                      <div 
+                        className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${getLevelColor(skill.level)} hover:scale-105 transition-all duration-200 cursor-default px-3 py-1 text-xs font-medium group-hover/skill:shadow-md border`}
                       >
                         <span className="font-medium">{skill.name}</span>
                         <span className="ml-1 text-xs opacity-70">({skill.level})</span>
-                      </Badge>
+                      </div>
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
