@@ -1,6 +1,4 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 const Experience = () => {
   const experiences = [
     {
@@ -50,23 +48,23 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card 
+            <div 
               key={exp.title}
-              className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              className="rounded-lg border border-border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
-              <CardHeader>
+              <div className="flex flex-col space-y-1.5 p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl text-blue-600">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-medium text-foreground">
+                    <h3 className="text-xl font-semibold leading-none tracking-tight text-blue-600">{exp.title}</h3>
+                    <p className="text-lg font-medium text-foreground">
                       {exp.company}
-                    </CardDescription>
+                    </p>
                   </div>
                   <span className="text-muted-foreground font-medium">{exp.period}</span>
                 </div>
-              </CardHeader>
+              </div>
               
-              <CardContent className="space-y-4">
+              <div className="p-6 pt-0 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   {exp.description}
                 </p>
@@ -82,8 +80,8 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
