@@ -5,10 +5,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <BrowserRouter>
         <Routes>
@@ -18,7 +17,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
-  </QueryClientProvider>
+
 );
 
 export default App;
