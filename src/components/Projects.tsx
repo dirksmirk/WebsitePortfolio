@@ -63,10 +63,10 @@ const Projects = () => {
               </div>
               
               <div className="flex flex-col space-y-1.5 p-6">
-                <h3 className="text-xl group-hover:text-blue-600 transition-colors duration-200 text-2xl font-semibold leading-none tracking-tight">
+                <h3 className="group-hover:text-blue-600 transition-colors duration-200 text-2xl font-semibold leading-none tracking-tight">
                   {project.title}
                 </h3>
-                <p className="text-base text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   {project.description}
                 </p>
               </div>
@@ -84,11 +84,11 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
                     <Github className="w-4 h-4" />
                     Code
                   </button>
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3">
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3">
                     <ArrowUpRight className="w-4 h-4" />
                     Live Demo
                   </button>

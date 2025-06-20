@@ -2,10 +2,10 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Startup Inc.",
-      period: "2022 - Present",
-      description: "Leading frontend development for a fast-growing SaaS platform, mentoring junior developers, and establishing development best practices.",
+      title: "Frontend Developer Intern",
+      company: "Baemingo",
+      period: "November 2024 - May 2025",
+      description: "Frontend developer intern, using my new tools to help develop the software i'd been supporting for so long and to help craft the perfect user experiences.",
       achievements: [
         "Improved application performance by 40%",
         "Built design system used across 5+ products",
@@ -13,25 +13,25 @@ const Experience = () => {
       ]
     },
     {
-      title: "UI/UX Designer & Developer",
-      company: "Digital Agency Co.",
-      period: "2020 - 2022",
-      description: "Full-stack design and development role, working directly with clients to deliver custom web solutions.",
+      title: "Operations, Support & Onboarding",
+      company: "Baemingo",
+      period: "August 2022 - November 2024",
+      description: "My time at Baemingo was spent fluidly working between support and onboarding, helping out within Operations wherever was most effective.",
       achievements: [
-        "Delivered 20+ client projects",
-        "Increased client satisfaction scores by 35%",
-        "Developed reusable component library"
+        "Managed Baemingos customer support while at the same time rolling out customers, effectively juggling two tasks at the same time",
+        "Took over management and creation of Baemingos customer guides, making sure they were up to date and translated to all necessary languages.",
+        "Rolled out and helped bring online hundreds of restaurants."
       ]
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Studios",
-      period: "2019 - 2020",
-      description: "Specialized in creating interactive web experiences and animations for creative campaigns.",
+      title: "First line, Second line support and Delivery manager",
+      company: "Ownit Broadband",
+      period: "2018 - 2022",
+      description: "I worked a mix of roles within my journey at Ownit, all related to the support and delivery of fiber broadband.",
       achievements: [
-        "Built award-winning interactive campaigns",
-        "Implemented advanced CSS animations",
-        "Collaborated with design team on 15+ projects"
+        "Supported thousands of customers with problems such as network issues, hardware problems and invoice questions.",
+        "Advanced from first line, to second line to delivery manager all within 5 months",
+        "Helped roll out fiber broadband to multiple condominium associations and companies, aswell as manage the upgrading of existing connectiong and hardware."
       ]
     }
   ];
