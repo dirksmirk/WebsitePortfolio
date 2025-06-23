@@ -1,10 +1,13 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Github, ExternalLink, Calendar, Users, Code } from "lucide-react";
+import { useState } from "react";
+import ImageModal from "../components/ImageModal";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Mock project data - in a real app, this would come from an API or database
   const projectData: Record<string, any> = {
@@ -79,6 +82,19 @@ const ProjectDetail = () => {
   };
 
   const project = projectData[slug || ""];
+
+  const handleImageClick = (index: number) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  const handleNavigateImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   if (!project) {
     return (
@@ -187,7 +203,8 @@ const ProjectDetail = () => {
                     key={index}
                     src={image} 
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer transform hover:scale-105"
+                    onClick={() => handleImageClick(index)}
                   />
                 ))}
               </div>
@@ -234,6 +251,16 @@ const ProjectDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        images={project.images}
+        currentIndex={currentImageIndex}
+        onNavigate={handleNavigateImage}
+        projectTitle={project.title}
+      />
     </div>
   );
 };
