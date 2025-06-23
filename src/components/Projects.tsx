@@ -1,41 +1,60 @@
 
 import { Github, ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
       title: "E-Commerce Platform",
       description: "Modern e-commerce solution with React, TypeScript, and Stripe integration",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
       tags: ["React", "TypeScript", "Tailwind", "Stripe"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/example/ecommerce",
+      live: "https://ecommerce-demo.com",
     },
     {
       title: "Task Management App",
       description: "Collaborative task management with real-time updates and team features",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
       tags: ["React", "Firebase", "Material-UI", "PWA"],
-      github: "#",
-      live: "#",
+      github: "", // No GitHub link
+      live: "", // No live demo link
     },
     {
       title: "Design System",
       description: "Comprehensive design system with reusable components and documentation",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop",
       tags: ["Figma", "Storybook", "React", "Design Tokens"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/example/design-system",
+      live: "", // No live demo link
     },
     {
       title: "Portfolio Website",
       description: "Responsive portfolio showcasing creative work with smooth animations",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
       tags: ["Next.js", "Framer Motion", "GSAP", "Contentful"],
-      github: "#",
-      live: "#",
+      github: "", // No GitHub link
+      live: "https://portfolio-demo.com",
     },
   ];
+
+  const handleGithubClick = (githubUrl: string) => {
+    if (githubUrl) {
+      window.open(githubUrl, '_blank');
+    }
+  };
+
+  const handleLiveDemoClick = (liveUrl: string, projectTitle: string) => {
+    if (liveUrl) {
+      window.open(liveUrl, '_blank');
+    } else {
+      // Navigate to project detail page
+      const projectSlug = projectTitle.toLowerCase().replace(/\s+/g, '-');
+      navigate(`/project/${projectSlug}`);
+    }
+  };
 
   return (
     <section id="projects" className="py-20 bg-background">
@@ -84,13 +103,24 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                  <button 
+                    onClick={() => handleGithubClick(project.github)}
+                    disabled={!project.github}
+                    className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input h-9 rounded-md px-3 ${
+                      project.github 
+                        ? 'bg-background hover:bg-accent hover:text-accent-foreground cursor-pointer' 
+                        : 'bg-muted text-muted-foreground cursor-not-allowed'
+                    }`}
+                  >
                     <Github className="w-4 h-4" />
                     Code
                   </button>
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3">
+                  <button 
+                    onClick={() => handleLiveDemoClick(project.live, project.title)}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+                  >
                     <ArrowUpRight className="w-4 h-4" />
-                    Live Demo
+                    {project.live ? 'Live Demo' : 'View Details'}
                   </button>
                 </div>
               </div>
