@@ -122,31 +122,23 @@ const Contact = () => {
 
           <div className="hover:shadow-lg transition-shadow duration-300 rounded-lg border border-border bg-card text-card-foreground shadow-sm relative">
             {/* Thank you message overlay */}
-            {submitStatus === "success" ? (
+            {submitStatus !== "idle" && (
               <div className="absolute inset-0 bg-card/95 backdrop-blur-sm rounded-lg flex items-center justify-center z-10 animate-fade-in">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🎉</div>
+                  <div className="text-6xl mb-4">
+                    {submitStatus === "success" ? "🎉" : "😞"}
+                    </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">
-                    Thanks for getting in touch!
+                    {submitStatus === "success" ? "Thanks for getting in touch!" : "Something went wrong with sending the email"}
                   </h3>
                   <p className="text-muted-foreground">
+                    {submitStatus === "error" ? "I'll get back to you as soon as possible." : "But please feel free to write to my email directly so we can get in touch!"}
                     I'll get back to you as soon as possible.
                   </p>
                 </div>
               </div>
-            ) : submitStatus === "error" ? (
-              <div className="absolute inset-0 bg-card/95 backdrop-blur-sm rounded-lg flex items-center justify-center z-10 animate-fade-in">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">😞</div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">
-                    Something went wrong with sending the email
-                  </h3>
-                  <p className="text-muted-foreground">
-                    But please feel free to write to my email directly so we can get in touch!
-                  </p>
-                </div>
-              </div>
-            ) : null}
+            )
+            }
 
             <div
               className={`transition-all duration-300 ${
