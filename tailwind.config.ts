@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -108,63 +107,153 @@ export default {
           '0%, 100%': {
             transform: 'translateY(0px) translateX(0px) rotate(0deg)',
           },
-          '33%': {
-            transform: 'translateY(-20px) translateX(10px) rotate(2deg)',
+          '25%': {
+            transform: 'translateY(-30px) translateX(20px) rotate(2deg)',
           },
-          '66%': {
-            transform: 'translateY(10px) translateX(-15px) rotate(-1deg)',
+          '50%': {
+            transform: 'translateY(-10px) translateX(-25px) rotate(-1deg)',
+          },
+          '75%': {
+            transform: 'translateY(20px) translateX(15px) rotate(1deg)',
           }
         },
         'float-reverse': {
           '0%, 100%': {
             transform: 'translateY(0px) translateX(0px) rotate(0deg)',
           },
-          '33%': {
-            transform: 'translateY(15px) translateX(-20px) rotate(-2deg)',
+          '25%': {
+            transform: 'translateY(25px) translateX(-30px) rotate(-2deg)',
           },
-          '66%': {
-            transform: 'translateY(-10px) translateX(15px) rotate(1deg)',
+          '50%': {
+            transform: 'translateY(-15px) translateX(20px) rotate(1deg)',
+          },
+          '75%': {
+            transform: 'translateY(10px) translateX(-10px) rotate(-1deg)',
           }
         },
         'bounce-slow': {
           '0%, 100%': {
             transform: 'translateY(0px) scale(1)',
           },
-          '50%': {
-            transform: 'translateY(-15px) scale(1.05)',
+          '33%': {
+            transform: 'translateY(-25px) scale(1.05)',
+          },
+          '66%': {
+            transform: 'translateY(15px) scale(0.95)',
           }
         },
         'drift': {
           '0%': {
-            transform: 'translateX(-100px) translateY(0px)',
+            transform: 'translateX(-120px) translateY(0px) rotate(0deg)',
+          },
+          '25%': {
+            transform: 'translateX(80px) translateY(-40px) rotate(90deg)',
           },
           '50%': {
-            transform: 'translateX(100px) translateY(-30px)',
+            transform: 'translateX(120px) translateY(30px) rotate(180deg)',
+          },
+          '75%': {
+            transform: 'translateX(-80px) translateY(-20px) rotate(270deg)',
           },
           '100%': {
-            transform: 'translateX(-100px) translateY(0px)',
+            transform: 'translateX(-120px) translateY(0px) rotate(360deg)',
           }
         },
         'orbit': {
           '0%': {
-            transform: 'rotate(0deg) translateX(50px) rotate(0deg)',
+            transform: 'rotate(0deg) translateX(60px) rotate(0deg)',
           },
           '100%': {
-            transform: 'rotate(360deg) translateX(50px) rotate(-360deg)',
+            transform: 'rotate(360deg) translateX(60px) rotate(-360deg)',
           }
         },
         'sway': {
           '0%, 100%': {
             transform: 'translateX(0px) translateY(0px) rotate(0deg)',
           },
+          '20%': {
+            transform: 'translateX(35px) translateY(-15px) rotate(2deg)',
+          },
+          '40%': {
+            transform: 'translateX(-20px) translateY(-30px) rotate(-1deg)',
+          },
+          '60%': {
+            transform: 'translateX(-35px) translateY(10px) rotate(-2deg)',
+          },
+          '80%': {
+            transform: 'translateX(20px) translateY(25px) rotate(1deg)',
+          }
+        },
+        'random-move': {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px) rotate(0deg)',
+          },
+          '14%': {
+            transform: 'translateX(50px) translateY(-30px) rotate(45deg)',
+          },
+          '28%': {
+            transform: 'translateX(-40px) translateY(-60px) rotate(90deg)',
+          },
+          '42%': {
+            transform: 'translateX(-80px) translateY(20px) rotate(135deg)',
+          },
+          '57%': {
+            transform: 'translateX(30px) translateY(70px) rotate(180deg)',
+          },
+          '71%': {
+            transform: 'translateX(90px) translateY(40px) rotate(225deg)',
+          },
+          '85%': {
+            transform: 'translateX(-20px) translateY(-20px) rotate(270deg)',
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px) rotate(360deg)',
+          }
+        },
+        'spiral': {
+          '0%': {
+            transform: 'rotate(0deg) translateX(0px) translateY(0px)',
+          },
           '25%': {
-            transform: 'translateX(25px) translateY(-10px) rotate(1deg)',
+            transform: 'rotate(90deg) translateX(40px) translateY(-40px)',
           },
           '50%': {
-            transform: 'translateX(0px) translateY(-20px) rotate(0deg)',
+            transform: 'rotate(180deg) translateX(80px) translateY(0px)',
           },
           '75%': {
-            transform: 'translateX(-25px) translateY(-10px) rotate(-1deg)',
+            transform: 'rotate(270deg) translateX(40px) translateY(40px)',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateX(0px) translateY(0px)',
+          }
+        },
+        'zigzag': {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px)',
+          },
+          '12.5%': {
+            transform: 'translateX(40px) translateY(-30px)',
+          },
+          '25%': {
+            transform: 'translateX(-30px) translateY(-60px)',
+          },
+          '37.5%': {
+            transform: 'translateX(60px) translateY(-40px)',
+          },
+          '50%': {
+            transform: 'translateX(-50px) translateY(20px)',
+          },
+          '62.5%': {
+            transform: 'translateX(30px) translateY(60px)',
+          },
+          '75%': {
+            transform: 'translateX(-40px) translateY(40px)',
+          },
+          '87.5%': {
+            transform: 'translateX(20px) translateY(-10px)',
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px)',
           }
         }
       },
@@ -178,7 +267,10 @@ export default {
         'bounce-slow': 'bounce-slow 12s ease-in-out infinite',
         'drift': 'drift 15s linear infinite',
         'orbit': 'orbit 20s linear infinite',
-        'sway': 'sway 14s ease-in-out infinite'
+        'sway': 'sway 14s ease-in-out infinite',
+        'random-move': 'random-move 18s ease-in-out infinite',
+        'spiral': 'spiral 16s linear infinite',
+        'zigzag': 'zigzag 22s ease-in-out infinite'
       }
     }
   },
