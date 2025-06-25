@@ -4,11 +4,17 @@ import { ArrowDown } from "lucide-react";
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-      {/* Animated background elements */}
+      {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-300/20 dark:bg-blue-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-72 h-72 bg-purple-300/20 dark:bg-purple-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-300/20 dark:bg-pink-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
+        {/* Moving circles with enhanced colors and animations */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/30 dark:bg-blue-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-0 animate-[float_8s_ease-in-out_infinite]"></div>
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-400/35 dark:bg-purple-400/25 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000 animate-[float-reverse_10s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-400/30 dark:bg-pink-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000 animate-[bounce-slow_12s_ease-in-out_infinite]"></div>
+        
+        {/* Additional floating elements for more dynamic effect */}
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-300/25 dark:bg-cyan-400/15 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-1000 animate-[drift_15s_linear_infinite]"></div>
+        <div className="absolute bottom-1/3 left-1/5 w-56 h-56 bg-indigo-400/30 dark:bg-indigo-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-3000 animate-[orbit_20s_linear_infinite]"></div>
+        <div className="absolute top-1/5 right-1/5 w-48 h-48 bg-violet-300/25 dark:bg-violet-400/15 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-5000 animate-[sway_14s_ease-in-out_infinite]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

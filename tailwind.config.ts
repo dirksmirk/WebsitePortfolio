@@ -103,13 +103,82 @@ export default {
             transform: 'none',
             animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
           }
+        },
+        'float': {
+          '0%, 100%': {
+            transform: 'translateY(0px) translateX(0px) rotate(0deg)',
+          },
+          '33%': {
+            transform: 'translateY(-20px) translateX(10px) rotate(2deg)',
+          },
+          '66%': {
+            transform: 'translateY(10px) translateX(-15px) rotate(-1deg)',
+          }
+        },
+        'float-reverse': {
+          '0%, 100%': {
+            transform: 'translateY(0px) translateX(0px) rotate(0deg)',
+          },
+          '33%': {
+            transform: 'translateY(15px) translateX(-20px) rotate(-2deg)',
+          },
+          '66%': {
+            transform: 'translateY(-10px) translateX(15px) rotate(1deg)',
+          }
+        },
+        'bounce-slow': {
+          '0%, 100%': {
+            transform: 'translateY(0px) scale(1)',
+          },
+          '50%': {
+            transform: 'translateY(-15px) scale(1.05)',
+          }
+        },
+        'drift': {
+          '0%': {
+            transform: 'translateX(-100px) translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateX(100px) translateY(-30px)',
+          },
+          '100%': {
+            transform: 'translateX(-100px) translateY(0px)',
+          }
+        },
+        'orbit': {
+          '0%': {
+            transform: 'rotate(0deg) translateX(50px) rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateX(50px) rotate(-360deg)',
+          }
+        },
+        'sway': {
+          '0%, 100%': {
+            transform: 'translateX(0px) translateY(0px) rotate(0deg)',
+          },
+          '25%': {
+            transform: 'translateX(25px) translateY(-10px) rotate(1deg)',
+          },
+          '50%': {
+            transform: 'translateX(0px) translateY(-20px) rotate(0deg)',
+          },
+          '75%': {
+            transform: 'translateX(-25px) translateY(-10px) rotate(-1deg)',
+          }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.6s ease-out',
-        'bounce': 'bounce 1s infinite'
+        'bounce': 'bounce 1s infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'float-reverse': 'float-reverse 10s ease-in-out infinite',
+        'bounce-slow': 'bounce-slow 12s ease-in-out infinite',
+        'drift': 'drift 15s linear infinite',
+        'orbit': 'orbit 20s linear infinite',
+        'sway': 'sway 14s ease-in-out infinite'
       }
     }
   },
