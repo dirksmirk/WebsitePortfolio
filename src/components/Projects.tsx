@@ -10,39 +10,39 @@ const Projects = () => {
       description:
         "Examples pictures of my designs and implementations made during my internship at Baemingo. ",
       image:
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+        "https://i.ibb.co/vxSW0ywJ/image.png",
       tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
       github: "",
       live: "https://baemingo.com/en-se",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Collaborative task management with real-time updates and team features",
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
-      tags: ["React", "Firebase", "Material-UI", "PWA"],
-      github: "",
-      live: "",
-    },
-    {
-      title: "Design System",
-      description:
-        "Comprehensive design system with reusable components and documentation",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop",
-      tags: ["Figma", "Storybook", "React", "Design Tokens"],
-      github: "",
-      live: "",
     },
     {
       title: "Portfolio Website",
       description:
         "Responsive portfolio showcasing creative work with smooth animations",
       image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
-      tags: ["Next.js", "Framer Motion", "GSAP", "Contentful"],
-      github: "",
+        "https://i.ibb.co/8npxnDZW/image.png",
+      tags: ["React", "Typescript", "Tailwindcss", "Figma"],
+      github: "https://github.com/dirksmirk/modern-skill-spark",
+      live: "",
+    },
+        {
+      title: "Chat app",
+      description:
+        "Our first test at school with working with APIs on an advanced level. This chat app allows users to create accounts, connect to friends and keep conversations",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+      tags: ["React", "Javascript", "Material-UI", "REST-api"],
+      github: "https://github.com/dirksmirk/chat",
+      live: "",
+    },
+        {
+      title: "Puppycino",
+      description:
+        "Our first collaborative code project during my time at Jensen. Built only using HTML5 and CSS, this website is very simple in but proof of what we'd learnt so quickly in only 2 months since starting to learn",
+      image:
+        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
+      tags: ["HTML", "CSS", "GitHub", "Collaboration"],
+      github: "https://github.com/dirksmirk/GruppProjekt",
       live: "",
     },
   ];
