@@ -8,7 +8,7 @@ const Skills = () => {
       description: "Modern web technologies and frameworks",
       color: "text-blue-600",
       skills: [
-        { name: "React", level: "Advnced" },
+        { name: "React", level: "Advanced" },
         { name: "TypeScript", level: "Advanced" },
         { name: "JavaScript", level: "Advanced" },
         { name: "HTML5", level: "Advanced" },
@@ -62,13 +62,13 @@ const Skills = () => {
   const getLevelColor = (level: string) => {
     switch (level) {
       case "Expert":
-        return "bg-green-100 text-green-800 border-green-200";
+        return "bg-red-100 text-red-800 border-red-200";
       case "Advanced":
         return "bg-blue-100 text-blue-800 border-blue-200";
       case "Intermediate":
         return "bg-yellow-100 text-yellow-800 border-yellow-200";
       case "Beginner":
-        return "bg-gray-100 text-gray-800 border-gray-200";
+        return "bg-green-100 text-green-800 border-green-200";
       default:
         return "bg-gray-100 text-gray-800 border-gray-200";
     }
@@ -123,10 +123,10 @@ const Skills = () => {
         {/* Additional Skills Summary */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-8 bg-background/50 backdrop-blur-sm rounded-full px-8 py-4 border border-border/50">
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <Github className="w-5 h-5 text-muted-foreground" />
               <span className="text-sm font-medium">Open Source Contributor</span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-2">
               <GitBranch className="w-5 h-5 text-muted-foreground" />
               <span className="text-sm font-medium">Version Control Expert</span>

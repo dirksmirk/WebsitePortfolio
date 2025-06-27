@@ -18,7 +18,7 @@ const ProjectDetail = () => {
 
   // Mock project data - in a real app, this would come from an API or database
   const projectData: Record<string, any> = {
-    Baemingo: {
+    "Baemingo": {
       title: "Baemingo",
       description:
         "A comprehensive e-commerce solution built with modern web technologies. Features include user authentication, product catalog, shopping cart, payment processing, and admin dashboard.",
@@ -52,8 +52,8 @@ const ProjectDetail = () => {
       timeline: "6 months",
       team: "Small team of about 5",
     },
-    "task-management-app": {
-      title: "Task Management App",
+    "Dispatch": {
+      title: "Dispatch - Chat app",
       description:
         "A collaborative task management application with real-time updates and team features.",
       fullDescription:
@@ -83,10 +83,10 @@ const ProjectDetail = () => {
         "WebSocket",
         "Cloud Functions",
       ],
-      timeline: "4 months",
-      team: "2 Developers",
+      timeline: "2 months",
+      team: "Solo project",
     },
-    "design-system": {
+    "Puppycino": {
       title: "Design System",
       description:
         "A comprehensive design system with reusable components and documentation.",
@@ -117,8 +117,8 @@ const ProjectDetail = () => {
         "CSS Variables",
         "Design Tokens",
       ],
-      timeline: "6 months",
-      team: "3 Designers + 2 Developers",
+      timeline: "1 month",
+      team: "4 people",
     },
     "portfolio-website": {
       title: "Portfolio Website",

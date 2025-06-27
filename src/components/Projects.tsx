@@ -13,12 +13,12 @@ const Projects = () => {
         "https://i.ibb.co/vxSW0ywJ/image.png",
       tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
       github: "",
-      live: "https://baemingo.com/en-se",
+      live: "",
     },
     {
       title: "Portfolio Website",
       description:
-        "Responsive portfolio showcasing creative work with smooth animations",
+        "Responsive portfolio showcasing creative work with smooth animations, using the skills i've learnt during my first two years of frontend development",
       image:
         "https://i.ibb.co/8npxnDZW/image.png",
       tags: ["React", "Typescript", "Tailwindcss", "Figma"],
@@ -26,11 +26,11 @@ const Projects = () => {
       live: "",
     },
         {
-      title: "Chat app",
+      title: "Dispatch",
       description:
         "Our first test at school with working with APIs on an advanced level. This chat app allows users to create accounts, connect to friends and keep conversations",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+        "https://i.ibb.co/PzWNN3hN/bild.png",
       tags: ["React", "Javascript", "Material-UI", "REST-api"],
       github: "https://github.com/dirksmirk/chat",
       live: "",
@@ -58,7 +58,7 @@ const Projects = () => {
       window.open(liveUrl, "_blank");
     } else {
       // Navigate to project detail page
-      const projectSlug = projectTitle.toLowerCase().replace(/\s+/g, "-");
+      const projectSlug = projectTitle.replace(/\s+/g, "-");
       navigate(`/project/${projectSlug}`);
     }
   };
