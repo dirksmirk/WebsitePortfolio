@@ -18,14 +18,16 @@ const ProjectDetail = () => {
 
   // Mock project data - in a real app, this would come from an API or database
   const projectData: Record<string, any> = {
-    "Baemingo": {
+    // ALMOST DONE
+    "baemingo": {
       title: "Baemingo",
       description:
-        "A comprehensive e-commerce solution built with modern web technologies. Features include user authentication, product catalog, shopping cart, payment processing, and admin dashboard.",
+        "A modern POS solution for the restaurant",
       fullDescription:
-        "Baemingo creates a modern POS solution for all kinds of customer needs. With my knowledge of React, and learning Typescript and GraphQL during my time there, I was able to help craft even better customer experiences during my internship here.",
+        "Baemingo creates a modern Point of Sale solution for all kinds of customer needs. With my knowledge of React, and learning Typescript and GraphQL during my time there, I was able to help craft even better customer experiences during my internship at the company. \n My earlier years working as support & Onboarding helped a lot, as I came in with prior knowledge of the tool and managed to accomplish an array of tasks.",
       image:
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
+        "https://i.ibb.co/vxSW0ywJ/image.png",
+      // ADD MORE PICTURES
       images: [
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
@@ -33,40 +35,45 @@ const ProjectDetail = () => {
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "Private github",
+      link: "https://baemingo.com/sv-se",
       features: [
-        "User Authentication",
-        "Product Catalog",
-        "Shopping Cart",
-        "Payment Processing",
-        "Admin Dashboard",
-        "Responsive Design",
+        "Full UI upgrade for Backoffice voucher list, aswell as upgraded integration with the API to allow customers to try and fix failed vouchers",
+        "Search bar upgrades in the Backoffice",
+        "Integrated and created a troubleshooting guide for customers unable to find and add their printers",
+        "Created a inactivity tracker for table service, where inactive tables are marked if they've been inactive over 15 minutes",
+        "Items without any additions now get added instantly on Express screens",
+        "Lots of bug fixes to things like incorrect dates showing in the dashboard, text colors, modals not showing and more",
       ],
       technologies: [
-        "React 18",
+        "React",
         "TypeScript",
         "Tailwind CSS",
-        "Stripe API",
+        "GrapghQL",
         "Node.js",
-        "MongoDB",
+        "Vercel",
       ],
       timeline: "6 months",
-      team: "Small team of about 5",
+      team: "Small, 5-7 people",
     },
-    "Dispatch": {
+    // NOT DONE
+    "dispatch": {
       title: "Dispatch - Chat app",
       description:
         "A collaborative task management application with real-time updates and team features.",
       fullDescription:
         "This task management app enables teams to collaborate effectively with real-time updates, task assignments, progress tracking, and team communication features. Built as a Progressive Web App for optimal mobile experience.",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+        "https://i.ibb.co/PzWNN3hN/bild.png",
+      // ADD MORE PICTURES
       images: [
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+        "https://i.ibb.co/PzWNN3hN/bild.png",
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
       ],
       tags: ["React", "Firebase", "Material-UI", "PWA"],
-      github: "",
+      github: "https://github.com/dirksmirk/chat",
+      link: "https://dispatchchat.netlify.app/",
+      // FIX
       features: [
         "Real-time Collaboration",
         "Task Assignment",
@@ -75,6 +82,7 @@ const ProjectDetail = () => {
         "File Sharing",
         "Mobile PWA",
       ],
+      // FIX
       technologies: [
         "React",
         "Firebase",
@@ -86,21 +94,25 @@ const ProjectDetail = () => {
       timeline: "2 months",
       team: "Solo project",
     },
-    "Puppycino": {
+    // NOT DONE
+    "puppycino": {
       title: "Design System",
       description:
-        "A comprehensive design system with reusable components and documentation.",
+        "Made up website for a dog cafe.",
       fullDescription:
-        "A complete design system that provides consistent UI components, design tokens, and comprehensive documentation. Built with Storybook for component development and testing.",
+        "Our very first collaborative and larger scale project at my time at Jensen, started and finished right around the beginning of our time at school. Built using only HTML and CSS, with design planning including mockups and wireframes to plan for a proper design",
       image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
+      // ADD MORE PICTURES
       images: [
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
         "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop",
       ],
       tags: ["Figma", "Storybook", "React", "Design Tokens"],
-      github: "https://github.com/example/design-system",
+      github: "https://github.com/dirksmirk/Puppycino",
+      link: "",
+      // FIX
       features: [
         "Component Library",
         "Design Tokens",
@@ -110,16 +122,17 @@ const ProjectDetail = () => {
         "Icon System",
       ],
       technologies: [
-        "React",
-        "Storybook",
-        "Figma",
-        "TypeScript",
-        "CSS Variables",
-        "Design Tokens",
+        "HTML5",
+        "CSS",
+        "GitHub",
+        "Design planning",
+        "Mockup/Wireframe",
+        "Realtime Colors",
       ],
       timeline: "1 month",
-      team: "4 people",
+      team: "Small, 5 people",
     },
+    // NOT DONE
     "portfolio-website": {
       title: "Portfolio Website",
       description:
@@ -127,14 +140,15 @@ const ProjectDetail = () => {
       fullDescription:
         "A modern portfolio website featuring smooth animations, responsive design, and dynamic content management. Built with performance and accessibility in mind.",
       image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
+        "https://i.ibb.co/8npxnDZW/image.png",
       images: [
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
+        "https://i.ibb.co/8npxnDZW/image.png",
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
       ],
       tags: ["Next.js", "Framer Motion", "GSAP", "Contentful"],
-      github: "",
+      github: "https://github.com/dirksmirk/modern-skill-spark",
+      link: "",
       features: [
         "Smooth Animations",
         "Responsive Design",
@@ -238,6 +252,15 @@ const ProjectDetail = () => {
                   View Code
                 </button>
               )}
+              {project.github && (
+                <button
+                  onClick={() => window.open(project.github, "_blank")}
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6"
+                >
+                  <Github className="w-4 h-4" />
+                  View Code
+                </button>
+              )}
             </div>
           </div>
 
@@ -266,15 +289,19 @@ const ProjectDetail = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <h2 className="text-2xl font-semibold mb-4">Accomplishments</h2>
+              <ul className="list-disc ml-4">
                 {project.features.map((feature: string) => (
+                  <li key={feature} className="text-muted-foreground mb-1">{feature}</li>
+                ))}
+              </ul>
+                {/* {project.features.map((feature: string) => (
                   <div key={feature} className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-muted-foreground">{feature}</span>
                   </div>
-                ))}
-              </div>
+                ))} */}
+
             </div>
 
             <div>

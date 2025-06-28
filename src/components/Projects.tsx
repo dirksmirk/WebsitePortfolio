@@ -58,7 +58,7 @@ const Projects = () => {
       window.open(liveUrl, "_blank");
     } else {
       // Navigate to project detail page
-      const projectSlug = projectTitle.replace(/\s+/g, "-");
+      const projectSlug = projectTitle.toLowerCase().replace(/\s+/g, "-");
       navigate(`/project/${projectSlug}`);
     }
   };
