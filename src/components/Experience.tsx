@@ -7,9 +7,9 @@ const Experience = () => {
       period: "November 2024 - May 2025",
       description: "Frontend developer intern, using my new tools to help develop the software i'd been supporting for so long and to help craft the perfect user experiences.",
       achievements: [
-        "Improved application performance by 40%",
-        "Built design system used across 5+ products",
-        "Led team of 4 frontend developers"
+        "Learnt Typescript and GraphQL completely on my own to be able to keep up during my internship",
+        "Created my first customer facing products and released to the live environment",
+        "Worked closely with all developers at Baemningo, constantly taking on new tasks, feedback and learning new things"
       ]
     },
     {
@@ -19,8 +19,8 @@ const Experience = () => {
       description: "My time at Baemingo was spent fluidly working between support and onboarding, helping out within Operations wherever was most effective.",
       achievements: [
         "Managed Baemingos customer support while at the same time rolling out customers, effectively juggling two tasks at the same time",
-        "Took over management and creation of Baemingos customer guides, making sure they were up to date and translated to all necessary languages.",
-        "Rolled out and helped bring online hundreds of restaurants."
+        "Took over management and creation of Baemingos customer guides, making sure they were up to date and translated to all necessary languages",
+        "Rolled out and helped bring online hundreds of restaurants"
       ]
     },
     {
@@ -29,9 +29,9 @@ const Experience = () => {
       period: "2018 - 2022",
       description: "I worked a mix of roles within my journey at Ownit, all related to the support and delivery of fiber broadband.",
       achievements: [
-        "Supported thousands of customers with problems such as network issues, hardware problems and invoice questions.",
+        "Supported thousands of customers with problems such as network issues, hardware problems and invoice questions",
         "Advanced from first line, to second line to delivery manager all within 5 months",
-        "Helped roll out fiber broadband to multiple condominium associations and companies, aswell as manage the upgrading of existing connectiong and hardware."
+        "Helped roll out fiber broadband to multiple condominium associations and companies, while managing the upgrade of current fiber and hardware"
       ]
     }
   ];

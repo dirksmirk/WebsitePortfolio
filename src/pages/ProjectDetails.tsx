@@ -59,15 +59,15 @@ const ProjectDetail = () => {
     "dispatch": {
       title: "Dispatch - Chat app",
       description:
-        "A collaborative task management application with real-time updates and team features.",
+        "A minimalistic chat website built for simple use and access",
       fullDescription:
-        "This task management app enables teams to collaborate effectively with real-time updates, task assignments, progress tracking, and team communication features. Built as a Progressive Web App for optimal mobile experience.",
+        "My first API project, a simple chat website with a focus on minimalism. The idea was to make it as simple as possible to be able to chat and dispatch a message to someone else. The API used for the project is no longer available, so i've inserted mockdata into the project instead",
       image:
         "https://i.ibb.co/PzWNN3hN/bild.png",
       // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/PzWNN3hN/bild.png",
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+        "https://i.ibb.co/0bx37hY/Namnl-s.jpg",
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
       ],
       tags: ["React", "Firebase", "Material-UI", "PWA"],
@@ -75,21 +75,19 @@ const ProjectDetail = () => {
       link: "https://dispatchchat.netlify.app/",
       // FIX
       features: [
-        "Real-time Collaboration",
-        "Task Assignment",
-        "Progress Tracking",
-        "Team Chat",
-        "File Sharing",
-        "Mobile PWA",
+        "Encryption of user credentials during registration and login",
+        "Dark mode theme toggler",
+        "Profile editing, to change name, email and profile picture",
+        "Chat with multiple different users at once",
       ],
       // FIX
       technologies: [
         "React",
-        "Firebase",
+        "Javascript",
         "Material-UI",
-        "PWA",
-        "WebSocket",
-        "Cloud Functions",
+        "REST api",
+        "Netlify",
+        "Encryption",
       ],
       timeline: "2 months",
       team: "Solo project",
@@ -301,7 +299,6 @@ const ProjectDetail = () => {
                     <span className="text-muted-foreground">{feature}</span>
                   </div>
                 ))} */}
-
             </div>
 
             <div>
