@@ -132,8 +132,7 @@ const Contact = () => {
                     {submitStatus === "success" ? "Thanks for getting in touch!" : "Something went wrong with sending the email"}
                   </h3>
                   <p className="text-muted-foreground">
-                    {submitStatus === "error" ? "I'll get back to you as soon as possible." : "But please feel free to write to my email directly so we can get in touch!"}
-                    I'll get back to you as soon as possible.
+                    {submitStatus === "success" ? "I'll get back to you as soon as possible." : "But please feel free to write to my email directly so we can get in touch!"}
                   </p>
                 </div>
               </div>
