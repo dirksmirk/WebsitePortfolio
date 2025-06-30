@@ -16,17 +16,15 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a frontend developer and UI/UX designer with a unique perspective that comes 
-              from understanding both sides of the digital product creation process. My journey 
-              began with design, where I learned to think about user needs and create intuitive 
-              interfaces.
+              I'm a frontend developer with UI/UX designer chops, with lots of experience helping and understanding
+              customer needs. From being a first- and second-line support, to helping deliver and onboard
+              B2B customers, I know and understand the perspectives of what a customer really needs.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As I transitioned into development, I discovered the joy of bringing designs to 
-              life with clean, efficient code. This dual expertise allows me to create seamless 
-              workflows and deliver products that are not only visually stunning but also 
-              technically robust.
+              My development journey began 2 years ago when I started studying at Jensen Yrkeshögskola,
+              but my interest for programming and technology has been there since I was small.
+              I love building computers, modding my games and tinkering with my smart home equipment.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
@@ -51,14 +49,13 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center">
+              <img src="https://i.ibb.co/Sw2KJwQ5/DSC-0059.jpg" alt="photo of me" className="rounded-lg shadow-md" />
+              {/* <div className="text-center">
                 <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl font-bold text-white">JD</span>
                 </div>
                 <p className="text-muted-foreground">Your photo would go here</p>
-              </div>
-            </div>
+              </div> */}
           </div>
         </div>
       </div>

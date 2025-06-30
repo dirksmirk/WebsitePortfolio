@@ -8,14 +8,13 @@ const Skills = () => {
       description: "Modern web technologies and frameworks",
       color: "text-blue-600",
       skills: [
-        { name: "React", level: "Expert" },
+        { name: "React", level: "Advanced" },
         { name: "TypeScript", level: "Advanced" },
-        { name: "JavaScript", level: "Expert" },
-        { name: "HTML5", level: "Expert" },
+        { name: "JavaScript", level: "Advanced" },
+        { name: "HTML5", level: "Advanced" },
         { name: "CSS3", level: "Advanced" },
         { name: "Tailwind CSS", level: "Advanced" },
-        { name: "Next.js", level: "Intermediate" },
-        { name: "Vue.js", level: "Intermediate" },
+        { name: "Vite", level: "Intermediate" },
       ]
     },
     {
@@ -28,8 +27,7 @@ const Skills = () => {
         { name: "GitHub", level: "Advanced" },
         { name: "REST APIs", level: "Advanced" },
         { name: "GraphQL", level: "Intermediate" },
-        { name: "MongoDB", level: "Intermediate" },
-        { name: "PostgreSQL", level: "Intermediate" },
+        { name: "MongoDB", level: "Beginner" },
         { name: "Docker", level: "Beginner" },
       ]
     },
@@ -40,8 +38,6 @@ const Skills = () => {
       skills: [
         { name: "UI/UX Design", level: "Advanced" },
         { name: "Figma", level: "Advanced" },
-        { name: "Adobe XD", level: "Intermediate" },
-        { name: "Sketch", level: "Intermediate" },
         { name: "Prototyping", level: "Advanced" },
         { name: "Design Systems", level: "Advanced" },
         { name: "User Research", level: "Intermediate" },
@@ -66,13 +62,13 @@ const Skills = () => {
   const getLevelColor = (level: string) => {
     switch (level) {
       case "Expert":
-        return "bg-green-100 text-green-800 border-green-200";
+        return "bg-red-100 text-red-800 border-red-200";
       case "Advanced":
         return "bg-blue-100 text-blue-800 border-blue-200";
       case "Intermediate":
         return "bg-yellow-100 text-yellow-800 border-yellow-200";
       case "Beginner":
-        return "bg-gray-100 text-gray-800 border-gray-200";
+        return "bg-green-100 text-green-800 border-green-200";
       default:
         return "bg-gray-100 text-gray-800 border-gray-200";
     }
@@ -92,14 +88,14 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title} 
-              className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 bg-background/50 backdrop-blur-sm rounded-lg border border-border bg-card text-card-foreground shadow-sm"
+              className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 backdrop-blur-sm rounded-lg border-border bg-card text-card-foreground shadow-sm"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
               <div className="flex flex-col space-y-1.5 p-6 text-center pb-4">
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent mb-4 group-hover:scale-110 transition-transform duration-200 ${category.color}`}>
                   {getIcon(category.title)}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-2xl font-semibold leading-none tracking-tight">{category.title}</h3>
+                <h3 className="mb-2 text-2xl font-semibold leading-none tracking-tight">{category.title}</h3>
                 <p className="text-sm text-muted-foreground">{category.description}</p>
               </div>
               <div className="p-6 pt-0">
@@ -127,10 +123,10 @@ const Skills = () => {
         {/* Additional Skills Summary */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-8 bg-background/50 backdrop-blur-sm rounded-full px-8 py-4 border border-border/50">
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <Github className="w-5 h-5 text-muted-foreground" />
               <span className="text-sm font-medium">Open Source Contributor</span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-2">
               <GitBranch className="w-5 h-5 text-muted-foreground" />
               <span className="text-sm font-medium">Version Control Expert</span>

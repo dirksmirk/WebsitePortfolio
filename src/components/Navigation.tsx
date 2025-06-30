@@ -28,24 +28,27 @@ const Navigation = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled ? "bg-background/80 backdrop-blur-md shadow-lg border-b border-border" : "bg-transparent"
     }`}>
+          {/* <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Dirk Hubrecht
+          </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Portfolio
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:scale-105 transform"
-              >
-                {item.name}
-              </a>
-            ))}
-            <ThemeToggle />
+        <div className="flex items-center py-4">
+          {/* Desktop Navigation - Spread evenly across full width */}
+          <div className="hidden md:flex items-center justify-between w-full">
+            <div className="flex items-center justify-center flex-1 space-x-20">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:scale-105 transform"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            <div className="flex-shrink-0">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Navigation Toggle */}
