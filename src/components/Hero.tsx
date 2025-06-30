@@ -25,6 +25,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="text-5xl sm:text-7xl lg:text-8xl block text-foreground mb-4">Dirk Hubrecht</span>
             <span className="block text-foreground">Frontend Developer</span>
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               & UI/UX Designer

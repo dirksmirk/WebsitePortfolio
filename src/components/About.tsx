@@ -19,20 +19,12 @@ const About = () => {
               I'm a frontend developer with UI/UX designer chops, with lots of experience helping and understanding
               customer needs. From being a first- and second-line support, to helping deliver and onboard
               B2B customers, I know and understand the perspectives of what a customer really needs.
-              
-              from understanding both sides of the digital product creation process. My journey 
-              began with design, where I learned to think about user needs and create intuitive 
-              interfaces.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               My development journey began 2 years ago when I started studying at Jensen Yrkeshögskola,
               but my interest for programming and technology has been there since I was small.
-
-              As I transitioned into development, I discovered the joy of bringing designs to 
-              life with clean, efficient code. This dual expertise allows me to create seamless 
-              workflows and deliver products that are not only visually stunning but also 
-              technically robust.
+              I love building computers, modding my games and tinkering with my smart home equipment.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">

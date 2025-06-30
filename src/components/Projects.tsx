@@ -22,7 +22,7 @@ const Projects = () => {
       image:
         "https://i.ibb.co/8npxnDZW/image.png",
       tags: ["React", "Typescript", "Tailwindcss", "Figma"],
-      github: "https://github.com/dirksmirk/modern-skill-spark",
+      github: "https://github.com/dirksmirk/WebsitePortfolio",
       live: "",
     },
         {

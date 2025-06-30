@@ -6,6 +6,7 @@ import {
   Calendar,
   Users,
   Code,
+  ArrowUpRight,
 } from "lucide-react";
 import { useState } from "react";
 import ImageModal from "@/components/modal";
@@ -27,14 +28,15 @@ const ProjectDetail = () => {
         "Baemingo creates a modern Point of Sale solution for all kinds of customer needs. With my knowledge of React, and learning Typescript and GraphQL during my time there, I was able to help craft even better customer experiences during my internship at the company. \n My earlier years working as support & Onboarding helped a lot, as I came in with prior knowledge of the tool and managed to accomplish an array of tasks.",
       image:
         "https://i.ibb.co/vxSW0ywJ/image.png",
-      // ADD MORE PICTURES
       images: [
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+        "https://i.ibb.co/5WYJYXfR/434867382-7b4fead6-1929-49f0-aa50-7227da187218.png",
+        "https://i.ibb.co/vxNwxW2W/416111263-d9800207-1aee-45ea-ba7d-ba533ea49229.png",
+        "https://i.ibb.co/fd950NSF/Untitled.jpg",
+        "https://i.ibb.co/H9VxzQK/Untitled.jpg",
+        "https://i.ibb.co/20wh0sG6/image.png"
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
-      github: "Private github",
+      github: "",
       link: "https://baemingo.com/sv-se",
       features: [
         "Full UI upgrade for Backoffice voucher list, aswell as upgraded integration with the API to allow customers to try and fix failed vouchers",
@@ -64,23 +66,21 @@ const ProjectDetail = () => {
         "My first API project, a simple chat website with a focus on minimalism. The idea was to make it as simple as possible to be able to chat and dispatch a message to someone else. The API used for the project is no longer available, so i've inserted mockdata into the project instead",
       image:
         "https://i.ibb.co/PzWNN3hN/bild.png",
-      // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/PzWNN3hN/bild.png",
         "https://i.ibb.co/0bx37hY/Namnl-s.jpg",
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+        "https://i.ibb.co/gbYGKTjQ/Untitled.jpg",
+        "https://i.ibb.co/HpqGDqSQ/Untitled.jpg",
       ],
       tags: ["React", "Firebase", "Material-UI", "PWA"],
       github: "https://github.com/dirksmirk/chat",
       link: "https://dispatchchat.netlify.app/",
-      // FIX
       features: [
         "Encryption of user credentials during registration and login",
         "Dark mode theme toggler",
         "Profile editing, to change name, email and profile picture",
         "Chat with multiple different users at once",
       ],
-      // FIX
       technologies: [
         "React",
         "Javascript",
@@ -104,8 +104,6 @@ const ProjectDetail = () => {
       // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop",
       ],
       tags: ["Figma", "Storybook", "React", "Design Tokens"],
       github: "https://github.com/dirksmirk/Puppycino",
@@ -130,7 +128,6 @@ const ProjectDetail = () => {
       timeline: "1 month",
       team: "Small, 5 people",
     },
-    // NOT DONE
     "portfolio-website": {
       title: "Portfolio Website",
       description:
@@ -139,29 +136,25 @@ const ProjectDetail = () => {
         "A modern portfolio website featuring smooth animations, responsive design, and dynamic content management. Built with performance and accessibility in mind.",
       image:
         "https://i.ibb.co/8npxnDZW/image.png",
+      // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/8npxnDZW/image.png",
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
       ],
       tags: ["Next.js", "Framer Motion", "GSAP", "Contentful"],
-      github: "https://github.com/dirksmirk/modern-skill-spark",
+      github: "https://github.com/dirksmirk/WebsitePortfolio",
       link: "",
       features: [
         "Smooth Animations",
         "Responsive Design",
-        "CMS Integration",
-        "SEO Optimized",
+        "Theme switcher",
         "Performance Focused",
         "Accessibility",
       ],
       technologies: [
-        "Next.js",
-        "Framer Motion",
-        "GSAP",
-        "Contentful",
-        "TypeScript",
+        "React",
+        "Typescript",
         "Tailwind CSS",
+        "Netlify",
       ],
       timeline: "2 months",
       team: "Solo Project",
@@ -250,13 +243,14 @@ const ProjectDetail = () => {
                   View Code
                 </button>
               )}
-              {project.github && (
+              {project.link && (
                 <button
-                  onClick={() => window.open(project.github, "_blank")}
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6"
+                  onClick={() => window.open(project.link, "_blank")}
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+
                 >
-                  <Github className="w-4 h-4" />
-                  View Code
+                  <ArrowUpRight className="w-4 h-4" />
+                  Website
                 </button>
               )}
             </div>
@@ -293,12 +287,6 @@ const ProjectDetail = () => {
                   <li key={feature} className="text-muted-foreground mb-1">{feature}</li>
                 ))}
               </ul>
-                {/* {project.features.map((feature: string) => (
-                  <div key={feature} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">{feature}</span>
-                  </div>
-                ))} */}
             </div>
 
             <div>
