@@ -2,8 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
+import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
-import ProjectDetail from "./pages/ProjectDetails";
 
 
 const App = () => (

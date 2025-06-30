@@ -1,7 +1,10 @@
 import { Github, ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const navigate = useNavigate();
 
   const projects = [
@@ -133,6 +136,7 @@ const Projects = () => {
                     className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
                   >
                     <ArrowUpRight className="w-4 h-4" />
+                    {project.live ? 'Live Demo' : 'View Details'}
                     {project.live ? 'Live Demo' : 'View Details'}
                   </button>
                 </div>
