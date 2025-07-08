@@ -14,6 +14,7 @@ type ThemeProviderState = {
   setTheme: (theme: Theme) => void
 }
 
+// Double check so that theme is set based on system preferences
 const initialState: ThemeProviderState = {
   theme: "system",
   setTheme: () => null,

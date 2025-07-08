@@ -27,15 +27,12 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-5xl sm:text-7xl lg:text-8xl block text-foreground mb-4">Dirk Hubrecht</span>
             <span className="block text-foreground">Frontend Developer</span>
+            {/* // Make the text animated or adjust the colors so it doesnt blend into the background */}
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               & UI/UX Designer
             </span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Crafting beautiful, functional, and user-centered digital
-            experiences with modern technologies and design principles.
-          </p>
         </div>
       </div>
     </section>

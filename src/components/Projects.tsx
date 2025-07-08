@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Projects = () => {
   const navigate = useNavigate();
 
+  // Remove everything and only split the Baemingo projects into multiple ones, atleast 4. Describe all of the scenarios in full detail and have multiple pitcures going through all of the steps
+  // Make sure to describe exactly what was used to build everything
   const projects = [
     {
       title: "Baemingo",
