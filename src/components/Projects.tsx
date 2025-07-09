@@ -8,43 +8,43 @@ const Projects = () => {
   // Make sure to describe exactly what was used to build everything
   const projects = [
     {
-      title: "Baemingo",
+      title: "Baemingo - Inactivity tracker",
       description:
-        "Examples pictures of my designs and implementations made during my internship at Baemingo. ",
+        "Inactivity tracker for Baemingos Table Service Mode, allowing customers to quickly and easily see and manage inactive tables.",
       image:
-        "https://i.ibb.co/vxSW0ywJ/image.png",
+        "https://i.ibb.co/5WYJYXfR/434867382-7b4fead6-1929-49f0-aa50-7227da187218.png",
       tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
       github: "",
       live: "",
     },
     {
-      title: "Portfolio Website",
+      title: "Baemingo - Voucher UI revamp",
       description:
-        "Responsive portfolio showcasing creative work with smooth animations, using the skills i've learnt during my first two years of frontend development",
+        "A full revamp and upgrade of the backoffice voucher page, allowing for better readability, error message handling and customer input.",
       image:
-        "https://i.ibb.co/8npxnDZW/image.png",
-      tags: ["React", "Typescript", "Tailwindcss", "Figma"],
-      github: "https://github.com/dirksmirk/WebsitePortfolio",
+        "https://i.ibb.co/20wh0sG6/image.png",
+      tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
+      github: "",
       live: "",
     },
         {
-      title: "Dispatch",
+      title: "Baemingo - Printer troubleshooting integration",
       description:
-        "Our first test at school with working with APIs on an advanced level. This chat app allows users to create accounts, connect to friends and keep conversations",
+        "Integrated troubleshooting guide in the settings that appears and helps customers that can't find and add their printers.",
       image:
-        "https://i.ibb.co/PzWNN3hN/bild.png",
-      tags: ["React", "Javascript", "Material-UI", "REST-api"],
-      github: "https://github.com/dirksmirk/chat",
+        "https://i.ibb.co/vxNwxW2W/416111263-d9800207-1aee-45ea-ba7d-ba533ea49229.png",
+      tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
+      github: "",
       live: "",
     },
         {
-      title: "Puppycino",
+      title: "Baemingo - Express insta cart",
       description:
-        "Our first collaborative code project during my time at Jensen. Built only using HTML5 and CSS, this website is very simple in but proof of what we'd learnt so quickly in only 2 months since starting to learn",
+        "An upgrade to the Baemingo Express POS to instantly add items without additions or options to the cart.",
       image:
-        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
-      tags: ["HTML", "CSS", "GitHub", "Collaboration"],
-      github: "https://github.com/dirksmirk/GruppProjekt",
+        "https://i.ibb.co/H9VxzQK/Untitled.jpg",
+      tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
+      github: "",
       live: "",
     },
   ];
@@ -115,7 +115,8 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <button
+                  {/* Keeping this in here to re-add for any future projects where I can directly link the github */}
+{/*                   <button
                     onClick={() => handleGithubClick(project.github)}
                     disabled={!project.github}
                     className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input h-9 rounded-md px-3 ${
@@ -127,7 +128,7 @@ const Projects = () => {
                     {" "}
                     <Github className="w-4 h-4" />
                     {project.github ? "Code" : "Unavailable"}
-                  </button>
+                  </button> */}
                   <button
                     onClick={() =>
                       handleLiveDemoClick(project.live, project.title)

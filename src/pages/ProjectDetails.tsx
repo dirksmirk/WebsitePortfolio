@@ -19,31 +19,26 @@ const ProjectDetail = () => {
 
   const projectData: Record<string, any> = {
     // ALMOST DONE
-    "baemingo": {
-      title: "Baemingo",
+    "baemingo---inactivity-tracker": {
+      title: "Baemingo - Inactivity tracker",
       description:
-        "A modern POS solution for the restaurant",
+        "Inactivity tracker for Baemingos Table Service Mode, allowing customers to quickly and easily see and manage inactive tables.",
       fullDescription:
-        "Baemingo creates a modern Point of Sale solution for all kinds of customer needs. With my knowledge of React, and learning Typescript and GraphQL during my time there, I was able to help craft even better customer experiences during my internship at the company. \n My earlier years working as support & Onboarding helped a lot, as I came in with prior knowledge of the tool and managed to accomplish an array of tasks.",
+        "I helped create a inactivity tracker for Baemingos Table Service Mode, that uses colors to help mark inactive tables so restaurants can more easily control their inactive tables",
       image:
         "https://i.ibb.co/vxSW0ywJ/image.png",
       images: [
         "https://i.ibb.co/5WYJYXfR/434867382-7b4fead6-1929-49f0-aa50-7227da187218.png",
-        "https://i.ibb.co/vxNwxW2W/416111263-d9800207-1aee-45ea-ba7d-ba533ea49229.png",
-        "https://i.ibb.co/fd950NSF/Untitled.jpg",
-        "https://i.ibb.co/H9VxzQK/Untitled.jpg",
-        "https://i.ibb.co/20wh0sG6/image.png"
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "",
       link: "https://baemingo.com/sv-se",
       features: [
-        "Full UI upgrade for Backoffice voucher list, aswell as upgraded integration with the API to allow customers to try and fix failed vouchers",
-        "Search bar upgrades in the Backoffice",
-        "Integrated and created a troubleshooting guide for customers unable to find and add their printers",
-        "Created a inactivity tracker for table service, where inactive tables are marked if they've been inactive over 15 minutes",
-        "Items without any additions now get added instantly on Express screens",
-        "Lots of bug fixes to things like incorrect dates showing in the dashboard, text colors, modals not showing and more",
+        "Calculates and updates the time of the most inactive table every minute and action to keep the table map updated",
+        "Marks the top 5% most inactive tables in red, and the next 5% most inactive tables in orange",
+        "Inactive tables are calculated based on latest activity, which is tracked from an API using GrapgQL",
+        "Tables created or interacted with less than 15 minutes ago will not be marked, and tables with inactivity or creation more than 2 hours won't be marked either",
+        "These calculations are based on what would be most effective for a table service restaurant",
       ],
       technologies: [
         "React",
@@ -53,12 +48,12 @@ const ProjectDetail = () => {
         "Node.js",
         "Vercel",
       ],
-      timeline: "6 months",
-      team: "Small, 5-7 people",
+      timeline: "1 day",
+      team: "Solo project",
     },
     // NOT DONE
-    "dispatch": {
-      title: "Dispatch - Chat app",
+    "baemingo---voucher-ui-revamp": {
+      title: "Baemingo - Voucher UI revamp",
       description:
         "A minimalistic chat website built for simple use and access",
       fullDescription:
@@ -71,9 +66,9 @@ const ProjectDetail = () => {
         "https://i.ibb.co/gbYGKTjQ/Untitled.jpg",
         "https://i.ibb.co/HpqGDqSQ/Untitled.jpg",
       ],
-      tags: ["React", "Firebase", "Material-UI", "PWA"],
-      github: "https://github.com/dirksmirk/chat",
-      link: "https://dispatchchat.netlify.app/",
+      tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
+      github: "",
+      link: "https://baemingo.com/sv-se",
       features: [
         "Encryption of user credentials during registration and login",
         "Dark mode theme toggler",
@@ -88,29 +83,29 @@ const ProjectDetail = () => {
         "Netlify",
         "Encryption",
       ],
-      timeline: "2 months",
+      timeline: "1 months",
       team: "Solo project",
     },
     // NOT DONE
-    "puppycino": {
-      title: "Design System",
+    "baemingo---printer-troubleshooting-integration": {
+      title: "Baemingo - Printer troubleshooting integration",
       description:
-        "Made up website for a dog cafe.",
+        "A integrated troubleshooting guide customers can use to help troubleshoot if they're having issues finding and adding their printer in the Baemingo app",
       fullDescription:
-        "Our very first collaborative and larger scale project at my time at Jensen, started and finished right around the beginning of our time at school. Built using only HTML and CSS, with design planning including mockups and wireframes to plan for a proper design",
+        "Worked together with a colleague to create interactive guides for printers, so customers could troubleshoot without having to contact our support. While she created the guides for added printers, I created this guide for if you're unable to find your printer in the first place",
       image:
         "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
       // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
       ],
-      tags: ["Figma", "Storybook", "React", "Design Tokens"],
-      github: "https://github.com/dirksmirk/Puppycino",
-      link: "",
+      tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
+      github: "",
+      link: "https://baemingo.com/sv-se",
       // FIX
       features: [
-        "Component Library",
-        "Design Tokens",
+        "Created the layout",
+        "Added translations for all steps in all of Baemingos supported languages (Swedish, English, Danish, Norwegian, Turkish and Spanish)",
         "Documentation",
         "Accessibility",
         "Theming",
@@ -125,26 +120,26 @@ const ProjectDetail = () => {
         "Realtime Colors",
       ],
       timeline: "1 month",
-      team: "Small, 5 people",
+      team: "Small, 2 people",
     },
-    "portfolio-website": {
-      title: "Portfolio Website",
+    "baemingo---express-insta-cart": {
+      title: "Baemingo - Express Insta Cart",
       description:
-        "A responsive portfolio showcasing creative work with smooth animations.",
+        "Built in Logic that allows customers to instaty add items to their express cart when pressing an item that has no additions or options.",
       fullDescription:
-        "A modern portfolio website featuring smooth animations, responsive design, and dynamic content management. Built with performance and accessibility in mind.",
+        "Before this update, all items no matter what required two clicks to add to cart. This slowed down the use of the Express POS significantly if the customers wanted to add minor items to the cart. Thanks to this update, items now get added instantly to the cart if they have no extra additions or options",
       image:
         "https://i.ibb.co/8npxnDZW/image.png",
       // ADD MORE PICTURES
       images: [
         "https://i.ibb.co/8npxnDZW/image.png",
       ],
-      tags: ["Next.js", "Framer Motion", "GSAP", "Contentful"],
-      github: "https://github.com/dirksmirk/WebsitePortfolio",
-      link: "",
+      tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
+      github: "",
+      link: "https://baemingo.com/sv-se",
       features: [
-        "Smooth Animations",
-        "Responsive Design",
+        "onclick animations, making sure customers know they've added an item to their cart",
+        "Frontend logic, checking ",
         "Theme switcher",
         "Performance Focused",
         "Accessibility",
@@ -155,7 +150,7 @@ const ProjectDetail = () => {
         "Tailwind CSS",
         "Netlify",
       ],
-      timeline: "2 months",
+      timeline: "3 weeks",
       team: "Solo Project",
     },
   };
@@ -230,10 +225,12 @@ const ProjectDetail = () => {
                   {tag}
                 </span>
               ))}
-            </div>
+            </div>  
 
+            
             <div className="flex gap-4">
-              {project.github && (
+              {/* Removing GitHub button for now, will add back if any future projects can be linked directly */}
+              {/* {project.github && (
                 <button
                   onClick={() => window.open(project.github, "_blank")}
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6"
@@ -241,7 +238,7 @@ const ProjectDetail = () => {
                   <Github className="w-4 h-4" />
                   View Code
                 </button>
-              )}
+              )} */}
               {project.link && (
                 <button
                   onClick={() => window.open(project.link, "_blank")}
