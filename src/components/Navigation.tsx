@@ -16,11 +16,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
+    { name: "About", href: "#about" },
+    /* { name: "Skills", href: "#skills" }, */
+    /* { name: "Experience", href: "#experience" }, */
     { name: "Contact", href: "#contact" },
   ];
 
@@ -32,7 +31,7 @@ const Navigation = () => {
         <div className="flex items-center py-4">
           {/* Desktop Navigation - Spread evenly across full width */}
           <div className="hidden md:flex items-center justify-between w-full">
-            <div className="flex items-center justify-center flex-1 space-x-20">
+            <div className="flex items-center justify-center flex-1 space-x-32">
               {navItems.map((item) => (
                 <a
                   key={item.name}

@@ -14,6 +14,41 @@ type ThemeProviderState = {
   setTheme: (theme: Theme) => void
 }
 
+// Helper function to get the current system preference
+const getSystemTheme = (): "dark" | "light" => {
+  if (typeof window === "undefined") return "dark";
+  
+  // Primary method: CSS media query
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  
+  // Fallback method: Check if explicitly set to light
+  if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+    return "dark";
+  }
+  
+  // Additional fallback: Check computed styles on document
+  const computedStyle = window.getComputedStyle(document.documentElement);
+  const colorScheme = computedStyle.colorScheme;
+  
+  if (colorScheme === "dark") {
+    return "dark";
+  }
+  
+  // Final fallback: assume light
+  return "dark";
+}
+
+// Helper function to get the effective theme (resolves "system" to actual preference)
+const getEffectiveTheme = (theme: Theme): "dark" | "light" => {
+  if (theme === "system") {
+    return getSystemTheme()
+  }
+  return theme
+}
+
+// Double check so that theme is set based on system preferences
 const initialState: ThemeProviderState = {
   theme: "system",
   setTheme: () => null,
@@ -33,21 +68,36 @@ export function ThemeProvider({
 
   useEffect(() => {
     const root = window.document.documentElement
-
+    
+    // Remove existing theme classes
     root.classList.remove("light", "dark")
+    
+    // Get the effective theme (resolves "system" to actual preference)
+    const effectiveTheme = getEffectiveTheme(theme)
+    
+    // Apply the effective theme
+    root.classList.add(effectiveTheme)
+  }, [theme])
 
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
+  // Listen for system theme changes when theme is set to "system"
+  useEffect(() => {
+    if (theme !== "system") return
 
-      root.classList.add(systemTheme)
-      return
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    
+    const handleChange = () => {
+      const root = window.document.documentElement
+      root.classList.remove("light", "dark")
+      root.classList.add(getSystemTheme())
     }
 
-    root.classList.add(theme)
+    // Listen for changes in system preference
+    mediaQuery.addEventListener("change", handleChange)
+    
+    return () => mediaQuery.removeEventListener("change", handleChange)
   }, [theme])
+
+  console.log(theme)
 
   const value = {
     theme,
