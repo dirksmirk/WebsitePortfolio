@@ -18,7 +18,6 @@ const ProjectDetail = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const projectData: Record<string, any> = {
-    // ALMOST DONE
     "baemingo---inactivity-tracker": {
       title: "Baemingo - Inactivity tracker",
       description:
@@ -29,6 +28,9 @@ const ProjectDetail = () => {
         "https://i.ibb.co/vxSW0ywJ/image.png",
       images: [
         "https://i.ibb.co/5WYJYXfR/434867382-7b4fead6-1929-49f0-aa50-7227da187218.png",
+        "https://i.ibb.co/x8cVvmk7/IMG-0066.png",
+        "https://i.ibb.co/fzBJxHrk/IMG-0069.png",
+        "https://i.ibb.co/7t8w8sxc/IMG-0070.png",
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "",
@@ -48,78 +50,73 @@ const ProjectDetail = () => {
         "Node.js",
         "Vercel",
       ],
-      timeline: "1 day",
       team: "Solo project",
     },
     // NOT DONE
     "baemingo---voucher-ui-revamp": {
       title: "Baemingo - Voucher UI revamp",
       description:
-        "A minimalistic chat website built for simple use and access",
+        "A full revamp and upgrade of the backoffice voucher page, allowing for better readability, error message handling and customer input.",
       fullDescription:
-        "My first API project, a simple chat website with a focus on minimalism. The idea was to make it as simple as possible to be able to chat and dispatch a message to someone else. The API used for the project is no longer available, so i've inserted mockdata into the project instead",
+        "A personal pet project from my time at operations, finance questions are always critical. For customers to be able to easily see, understand and solve any voucher questions themselves would not just be greatly appreciated by customers, but is rather needed for the future growth of Baemingo.",
       image:
-        "https://i.ibb.co/PzWNN3hN/bild.png",
+        "https://i.ibb.co/20wh0sG6/image.png",
       images: [
-        "https://i.ibb.co/PzWNN3hN/bild.png",
-        "https://i.ibb.co/0bx37hY/Namnl-s.jpg",
-        "https://i.ibb.co/gbYGKTjQ/Untitled.jpg",
-        "https://i.ibb.co/HpqGDqSQ/Untitled.jpg",
+        "https://i.ibb.co/20wh0sG6/image.png",
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "",
       link: "https://baemingo.com/sv-se",
       features: [
-        "Encryption of user credentials during registration and login",
-        "Dark mode theme toggler",
-        "Profile editing, to change name, email and profile picture",
-        "Chat with multiple different users at once",
+        "Complete redesign of the page from the ground up, designed and organised all by myself",
+        "Created filtering tools for filtering vouchers by date as well as by venue",
+        "Each voucher error message was assigned a key depending on the error message, which then corresponded to a different title and message being displayed to customers on the frontend",
+        "Also added troubleshooting instructions and voucher dates",
+        "Lastly I created a 'reauthenticate' button that would appear on vouchers if the cause was a failed authentication between our system integration and the customers financy system",
       ],
       technologies: [
         "React",
-        "Javascript",
-        "Material-UI",
-        "REST api",
-        "Netlify",
-        "Encryption",
+        "TypeScript",
+        "Tailwind CSS",
+        "GrapghQL",
+        "Node.js",
+        "Vercel",
       ],
-      timeline: "1 months",
       team: "Solo project",
     },
-    // NOT DONE
     "baemingo---printer-troubleshooting-integration": {
       title: "Baemingo - Printer troubleshooting integration",
       description:
         "A integrated troubleshooting guide customers can use to help troubleshoot if they're having issues finding and adding their printer in the Baemingo app",
       fullDescription:
-        "Worked together with a colleague to create interactive guides for printers, so customers could troubleshoot without having to contact our support. While she created the guides for added printers, I created this guide for if you're unable to find your printer in the first place",
+        "Worked together with a colleague to create interactive guides for printers, so customers could troubleshoot without having to contact our support. While she created the guides for added printers, I created this guide for customers who are unable to find their printer in the first place",
       image:
-        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
+        "https://i.ibb.co/vxNwxW2W/416111263-d9800207-1aee-45ea-ba7d-ba533ea49229.png",
       // ADD MORE PICTURES
       images: [
-        "https://i.ibb.co/pryZkXWZ/1706218878930.jpg",
+        "https://i.ibb.co/vxNwxW2W/416111263-d9800207-1aee-45ea-ba7d-ba533ea49229.png",
+        "https://i.ibb.co/h17XvpNG/IMG-0045.png",
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "",
       link: "https://baemingo.com/sv-se",
       // FIX
       features: [
-        "Created the layout",
-        "Added translations for all steps in all of Baemingos supported languages (Swedish, English, Danish, Norwegian, Turkish and Spanish)",
-        "Documentation",
-        "Accessibility",
-        "Theming",
-        "Icon System",
+        "Created the data structure in the frontend together with a colleague",
+        "All options have a key connected, the modal displays information depending on the chosen keys",
+        "I helped set up all information, as I had prior knowledge and troubleshooting experience from my earlier work at operations",
+        "The design of the guide is made to flow and blend in with the rest of the UI, feel familiar to the customer",
+        "Ease of use was very important, so that customers actually use this tool instead of always trying/needing to call the support",
+        "Works with Baemingos two supported printer brands, Star and Epson",
       ],
       technologies: [
-        "HTML5",
-        "CSS",
-        "GitHub",
-        "Design planning",
-        "Mockup/Wireframe",
-        "Realtime Colors",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "GrapghQL",
+        "Node.js",
+        "Vercel",
       ],
-      timeline: "1 month",
       team: "Small, 2 people",
     },
     "baemingo---express-insta-cart": {
@@ -129,28 +126,31 @@ const ProjectDetail = () => {
       fullDescription:
         "Before this update, all items no matter what required two clicks to add to cart. This slowed down the use of the Express POS significantly if the customers wanted to add minor items to the cart. Thanks to this update, items now get added instantly to the cart if they have no extra additions or options",
       image:
-        "https://i.ibb.co/8npxnDZW/image.png",
-      // ADD MORE PICTURES
+        "https://i.ibb.co/TDV0CHJG/IMG-0072.png",
       images: [
-        "https://i.ibb.co/8npxnDZW/image.png",
+        "https://i.ibb.co/TDV0CHJG/IMG-0072.png",
+        "https://i.ibb.co/hJb1QzfD/IMG-0071.png",
+        "https://i.ibb.co/TDV0CHJG/IMG-0072.png",
+        "https://i.ibb.co/9mt1vXLc/IMG-0073.png",
+        "https://i.ibb.co/C5KjwF2M/IMG-0074.png",
       ],
       tags: ["React", "TypeScript", "Tailwind", "GraphQL", "POS"],
       github: "",
       link: "https://baemingo.com/sv-se",
       features: [
         "onclick animations, making sure customers know they've added an item to their cart",
-        "Frontend logic, checking ",
-        "Theme switcher",
-        "Performance Focused",
-        "Accessibility",
+        "Frontend logic, using information from the API to check for if the item has any options the customer can/needs to choose between",
+        "+ icon on top of every item that can be added instantly to cart, so customers can see at a glance",
+        "Translations for all supported languages",
       ],
       technologies: [
         "React",
-        "Typescript",
+        "TypeScript",
         "Tailwind CSS",
-        "Netlify",
+        "GrapghQL",
+        "Node.js",
+        "Vercel",
       ],
-      timeline: "3 weeks",
       team: "Solo Project",
     },
   };
@@ -242,7 +242,7 @@ const ProjectDetail = () => {
               {project.link && (
                 <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-md px-3"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-md px-3"
 
                 >
                   <ArrowUpRight className="w-4 h-4" />
@@ -306,15 +306,6 @@ const ProjectDetail = () => {
             <div className="border border-border rounded-lg p-6 bg-card">
               <h3 className="text-lg font-semibold mb-4">Project Info</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-muted-foreground mt-0.5" />
-                  <div>
-                    <p className="font-medium">Timeline</p>
-                    <p className="text-sm text-muted-foreground">
-                      {project.timeline}
-                    </p>
-                  </div>
-                </div>
                 <div className="flex items-start gap-3">
                   <Users className="w-5 h-5 text-muted-foreground mt-0.5" />
                   <div>

@@ -42,7 +42,7 @@ const Projects = () => {
       description:
         "An upgrade to the Baemingo Express POS to instantly add items without additions or options to the cart.",
       image:
-        "https://i.ibb.co/H9VxzQK/Untitled.jpg",
+        "https://i.ibb.co/TDV0CHJG/IMG-0072.png",
       tags: ["React", "TypeScript", "Tailwindcss", "GraphQL"],
       github: "",
       live: "",
